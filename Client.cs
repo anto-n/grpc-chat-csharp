@@ -106,7 +106,7 @@ namespace Client {
             client.SendMessage(chatMessage);
         }
 
-        public async Task PrintMessages(UInt32 roomId) {
+        public async Task PullMessages(UInt32 roomId) {
             try {
                 var lastPulledMessage = lastPulledMessageIndex[roomId];
 
@@ -170,7 +170,7 @@ namespace Client {
                 {
                     try
                     {
-                        await chat.PrintMessages(roomId);
+                        await chat.PullMessages(roomId);
                     }
                     catch (Exception ex)
                     {
