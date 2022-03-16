@@ -126,13 +126,11 @@ namespace Client {
                             continue;
                         }
 
-                        StringBuilder responseLog = new StringBuilder("============================================\n");
-                        responseLog.Append("From: ")
-                        .Append(message.User.Name)
-                        .Append("\n")
-                        .Append(message.Text)
-                        .Append("\n");
-                        Console.WriteLine(responseLog.ToString());
+                        StringBuilder messageToPrint = new StringBuilder("");
+                        messageToPrint.Append(message.User.Name)
+                                      .Append(": ")
+                                      .Append(message.Text);
+                        Console.WriteLine(messageToPrint.ToString());
                     }
                 }
             }
